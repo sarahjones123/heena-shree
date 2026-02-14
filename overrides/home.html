@@ -1,36 +1,62 @@
 {% extends "main.html" %}
 
-{% block tabs %}
-  {{ super() }}
-  <style>
-    /* Custom Hero Section Styling */
-    .md-main { display: none; } /* Hides default content area on home */
-    .hero-container {
-      padding: 100px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-    }
-    .hero-title { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 1.5rem; opacity: 0.9; }
-    .btn-explore {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 12px 24px;
-      background: white;
-      color: #6e8efb;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+{% block content %}
+<div class="hero-wrapper">
+  <div class="reveal">
+    <h1 class="hero-h1">Heena Shree</h1>
+    <p style="font-size: 1.5rem; opacity: 0.8; max-width: 700px; margin: 0 auto 40px;">
+      13 Years in Banking. 100% Focused on Clarity. <br>
+      Technical Writer for SaaS & Financial Systems.
+    </p>
+    <a href="#projects" class="md-button md-button--primary" style="padding: 15px 35px;">View My Projects</a>
+  </div>
+</div>
 
-  <section class="hero-container">
-    <div class="hero-title">Welcome to My Portfolio</div>
-    <div class="hero-subtitle">Creative Designer & Photographer</div>
-    <a href="about/" class="btn-explore">See My Work</a>
-  </section>
+<div class="section-white" style="border-bottom: 1px solid var(--md-typeset-table-color);">
+  <div class="project-grid" style="text-align: center;">
+    <div>
+      <span style="font-size: 2.5rem;">📘</span>
+      <h3>User-Centric Docs</h3>
+    </div>
+    <div>
+      <span style="font-size: 2.5rem;">⚙️</span>
+      <h3>API & SaaS</h3>
+    </div>
+    <div>
+      <span style="font-size: 2.5rem;">🏦</span>
+      <h3>FinTech Expert</h3>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="section-white">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Featured Work</h2>
+  
+  <div class="project-grid">
+    <a href="projects/taskflow/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">User Guide</small>
+      <h3>TaskFlow SaaS Guide</h3>
+      <p>A deep dive into cloud-based task management documentation for end-users.</p>
+    </a>
+
+    <a href="projects/export-feature/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">Product Docs</small>
+      <h3>Release Notes & Features</h3>
+      <p>Explaining technical feature rollouts with precision and clarity.</p>
+    </a>
+
+    <a href="projects/banking-sop/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">Internal SOP</small>
+      <h3>Banking Escalations</h3>
+      <p>High-compliance procedural documentation from a decade in finance.</p>
+    </a>
+  </div>
+</div>
+
+<div class="section-white" style="text-align: center; background: var(--md-accent-fg-color); color: white;">
+  <h2 style="color: white;">Ready to hire a writer with domain expertise?</h2>
+  <p style="margin-bottom: 30px;">Currently exploring opportunities in SaaS and Fintech teams.</p>
+  <a href="about/" class="md-button" style="background: white; color: black; border: none;">Get in Touch</a>
+</div>
+
 {% endblock %}
-
-{% block content %}{% endblock %}
-{% block footer %}{% endblock %}

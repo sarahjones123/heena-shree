@@ -7,16 +7,47 @@ theme:
   name: material
   custom_dir: overrides
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+      # Light Mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: indigo
+        accent: indigo
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      # Dark Mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: black
+        accent: indigo
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  extra_css:
+    - stylesheets/extra.css
+
+  extra_javascript:
+    - javascripts/extra.js
+
+  markdown_extensions:
+    - attr_list
+    - md_in_html
+  
   features:
-    - navigation.sections
     - navigation.expand
-    - navigation.top
     - search.highlight
     - content.code.copy
     - content.tabs.link
+    - navigation.tabs          # Top menu style
+    - navigation.tabs.sticky   # Keeps menu at top
+    - navigation.sections
+    - navigation.instant       # Faster page loads
+    - content.tooltips
+    - navigation.top           # Back to top button
 
 nav:
   - Home: index.md

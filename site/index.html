@@ -179,10 +179,40 @@
     <div class="md-container" data-md-component="container">
       
       
+  
         
           
         
       
+  <style>
+    /* Custom Hero Section Styling */
+    .md-main { display: none; } /* Hides default content area on home */
+    .hero-container {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+    }
+    .hero-title { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 1.5rem; opacity: 0.9; }
+    .btn-explore {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: white;
+      color: #6e8efb;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+
+  <section class="hero-container">
+    <div class="hero-title">Welcome to My Portfolio</div>
+    <div class="hero-subtitle">Creative Designer & Photographer</div>
+    <a href="about/" class="btn-explore">See My Work</a>
+  </section>
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -824,52 +854,6 @@
               
               <article class="md-content__inner md-typeset">
                 
-                  
-
-
-
-  <h1>Home</h1>
-
-<!-- ---
-template: home.html
---- -->
-
-<!-- # Technical Documentation Portfolio
-
-## Heena Shree  
-**Technical Documentation Specialist (Entry Level)**
-
-Welcome to my documentation portfolio.
-
-This site showcases structured documentation samples aligned with SaaS and fintech product environments. The focus is on clarity, system logic, workflow documentation, and scalable content practices.
-
----
-
-## Core Focus Areas
-
-- SaaS product documentation  
-- Feature-level documentation  
-- Process and workflow documentation  
-- Fintech compliance documentation  
-- API documentation fundamentals  
-- Structured Markdown authoring  
-
----
-
-Documentation should reduce ambiguity, improve usability, and support operational efficiency. -->
-
-
-
-
-
-
-
-
-
-
-
-
-                
               </article>
             </div>
           
@@ -886,24 +870,6 @@ Documentation should reduce ambiguity, improve usability, and support operationa
 </button>
         
       </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

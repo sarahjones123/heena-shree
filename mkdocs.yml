@@ -1,6 +1,7 @@
 site_name: Heena Shree – Technical Documentation Portfolio
 site_description: Technical Documentation Specialist (Entry Level)
 site_author: Heena Shree
+site_url: https://sarahjones123.github.io/heena-shree/
 
 theme:
   name: material

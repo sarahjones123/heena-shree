@@ -48,8 +48,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -87,7 +87,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="Heena Shree – Technical Documentation Portfolio" class="md-header__button md-logo" aria-label="Heena Shree – Technical Documentation Portfolio" data-md-component="logo">
       
@@ -122,7 +122,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
     
   
 </form>
@@ -176,58 +190,142 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="about/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="saas/overview/" class="md-tabs__link">
+          
+  
+  
+  SaaS Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="fintech/overview/" class="md-tabs__link">
+          
+  
+  
+  Fintech Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="markdown-sample/api-overview/" class="md-tabs__link">
+          
+  
+  
+  Markdown Sample
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-  
-        
-          
         
       
-  <style>
-    /* Custom Hero Section Styling */
-    .md-main { display: none; } /* Hides default content area on home */
-    .hero-container {
-      padding: 100px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-    }
-    .hero-title { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 1.5rem; opacity: 0.9; }
-    .btn-explore {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 12px 24px;
-      background: white;
-      color: #6e8efb;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-
-  <section class="hero-container">
-    <div class="hero-title">Welcome to My Portfolio</div>
-    <div class="hero-subtitle">Creative Designer & Photographer</div>
-    <a href="about/" class="btn-explore">See My Work</a>
-  </section>
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Heena Shree – Technical Documentation Portfolio" class="md-nav__button md-logo" aria-label="Heena Shree – Technical Documentation Portfolio" data-md-component="logo">
       
@@ -286,12 +384,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -300,7 +398,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -403,12 +501,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -417,7 +515,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -576,12 +674,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -590,7 +688,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -749,12 +847,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -763,7 +861,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -835,7 +933,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -856,6 +956,65 @@
               
               <article class="md-content__inner md-typeset">
                 
+<div class="hero-wrapper">
+  <div class="reveal">
+    <h1 class="hero-h1">Heena Shree</h1>
+    <p style="font-size: 1.5rem; opacity: 0.8; max-width: 700px; margin: 0 auto 40px;">
+      13 Years in Banking. 100% Focused on Clarity. <br>
+      Technical Writer for SaaS & Financial Systems.
+    </p>
+    <a href="#projects" class="md-button md-button--primary" style="padding: 15px 35px;">View My Projects</a>
+  </div>
+</div>
+
+<div class="section-white" style="border-bottom: 1px solid var(--md-typeset-table-color);">
+  <div class="project-grid" style="text-align: center;">
+    <div>
+      <span style="font-size: 2.5rem;">📘</span>
+      <h3>User-Centric Docs</h3>
+    </div>
+    <div>
+      <span style="font-size: 2.5rem;">⚙️</span>
+      <h3>API & SaaS</h3>
+    </div>
+    <div>
+      <span style="font-size: 2.5rem;">🏦</span>
+      <h3>FinTech Expert</h3>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="section-white">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Featured Work</h2>
+  
+  <div class="project-grid">
+    <a href="projects/taskflow/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">User Guide</small>
+      <h3>TaskFlow SaaS Guide</h3>
+      <p>A deep dive into cloud-based task management documentation for end-users.</p>
+    </a>
+
+    <a href="projects/export-feature/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">Product Docs</small>
+      <h3>Release Notes & Features</h3>
+      <p>Explaining technical feature rollouts with precision and clarity.</p>
+    </a>
+
+    <a href="projects/banking-sop/" class="glass-card reveal">
+      <small style="text-transform: uppercase; color: var(--md-accent-fg-color);">Internal SOP</small>
+      <h3>Banking Escalations</h3>
+      <p>High-compliance procedural documentation from a decade in finance.</p>
+    </a>
+  </div>
+</div>
+
+<div class="section-white" style="text-align: center; background: var(--md-accent-fg-color); color: white;">
+  <h2 style="color: white;">Ready to hire a writer with domain expertise?</h2>
+  <p style="margin-bottom: 30px;">Currently exploring opportunities in SaaS and Fintech teams.</p>
+  <a href="about/" class="md-button" style="background: white; color: black; border: none;">Get in Touch</a>
+</div>
+
+
               </article>
             </div>
           
@@ -873,6 +1032,24 @@
         
       </main>
       
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -882,7 +1059,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.instant", "content.tooltips", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>

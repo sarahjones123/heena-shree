@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background: #f4f4f4;
+  }
+  
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* SIDEBAR */
+  
+  .sidebar {
+    width: 260px;
+    background: #3a3f45;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+  }
+  
+  .profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 6px solid #5a6068;
+    margin-bottom: 40px;
+    object-fit: cover;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .nav a:hover {
+    color: white;
+  }
+  
+  /* MAIN CONTENT */
+  
+  .content {
+    margin-left: 260px;
+    padding: 80px 100px;
+    flex: 1;
+    background: #ffffff;
+  }
+  
+  /* HERO */
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .hero h1 span {
+    color: #c4552f;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #555;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    margin-left: 20px;
+  }
+  
+  hr {
+    margin: 50px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 900px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .content {
+      margin-left: 0;
+      padding: 40px 20px;
+    }
+  }
+
+  .skills-block {
+    margin-bottom: 50px;
+  }
+  
+  .skills-block h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  
+  .skills-block ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .skills-block li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .skills-block li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #c4552f;
+    font-weight: bold;
+  }
+  
+  .nav a.active {
+    color: white;
+    font-weight: 700;
+  }
+  
+  

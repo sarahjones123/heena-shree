@@ -1,4 +1,8 @@
-# Technical Documentation Portfolio
+---
+template: home.html
+---
+
+<!-- # Technical Documentation Portfolio
 
 ## Heena Shree  
 **Technical Documentation Specialist (Entry Level)**
@@ -20,4 +24,4 @@ This site showcases structured documentation samples aligned with SaaS and finte
 
 ---
 
-Documentation should reduce ambiguity, improve usability, and support operational efficiency.
+Documentation should reduce ambiguity, improve usability, and support operational efficiency. -->

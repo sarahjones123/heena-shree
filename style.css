@@ -327,6 +327,63 @@
     font-size: 13px;
     color: #333;
   }
+
+  /* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.cert-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.cert-meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Recommendations */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.recommend-card {
+  background: #f9fafb;
+  border-left: 4px solid #4f46e5;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
   
     
   

@@ -1,37 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SaaS Documentation Project</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>FlowSync – Product Overview & Configuration Guide</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.diagram-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  border: 2px solid #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 160px;
+  background: #f8f8f8;
+}
+
+.arrow {
+  font-size: 24px;
+  align-self: center;
+}
+
+.flow-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.flow-step {
+  border: 2px solid #444;
+  padding: 12px 25px;
+  border-radius: 6px;
+  background: #f4f6f9;
+  width: 260px;
+  text-align: center;
+}
+
+</style>
+
 </head>
+
 <body>
 
 <div class="layout">
+
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="profile">
       <img src="profile.jpg">
     </div>
     <nav class="nav">
-      <a href="index.html">ABOUT</a>
-      <a href="skills.html">SKILLS</a>
-      <a href="projects.html">PROJECTS</a>
+      <a href="index.html">ABOUT ME</a>
+      <a href="./index.html#skills">SKILLS</a>
+      <a href="./index.html#projects">PROJECTS</a>
     </nav>
   </aside>
 
+  <!-- MAIN CONTENT -->
+
   <main class="content">
-    <h1>SaaS Documentation Project</h1>
+  <h1>FlowSync Documentation</h1>
 
-    <p>This project demonstrates structured user guide creation including:</p>
+  <p>
+  FlowSync is a cloud-based workflow automation platform designed to streamline approval processes, task routing, and compliance monitoring. 
+  This document provides a structured overview of the product and a step-by-step configuration guide for administrators.
+  </p>
+  
+  <hr>
+  
+  <h2>1. Product Overview</h2>
+  
+  <p>
+  FlowSync enables organizations to design configurable workflows without custom development. 
+  The system centralizes approval chains, enforces business rules, and provides real-time monitoring dashboards.
+  </p>
+  <br>
+  
+  <h3>Core Capabilities</h3>
+  
+  <ul>
+    <li>Custom workflow builder</li>
+    <li>Role-based approval routing</li>
+    <li>Conditional branching logic</li>
+    <li>Automated notifications</li>
+    <li>Audit logging and compliance tracking</li>
+    <li>Analytics dashboard</li>
+  </ul>
+  
+  <hr>
+  
+  <h2>2. System Architecture</h2>
+  
+  <p>
+  FlowSync follows a modular SaaS architecture to ensure scalability and maintainability.
+  </p>
+  
+  <div class="diagram-container">
+    <div class="box">User Interface</div>
+    <div class="arrow">→</div>
+    <div class="box">Workflow Engine</div>
+    <div class="arrow">→</div>
+    <div class="box">Notification Service</div>
+    <div class="arrow">→</div>
+    <div class="box">Database Layer</div>
+  </div>
+  
+  <p>
+  The <strong>Workflow Engine</strong> executes automation rules, while the <strong>Notification Service</strong> ensures real-time alerts. 
+  All workflow states and transactions are persisted in the database layer.
+  </p>
+  
+  <hr>
+  
+  <h2>3. Workflow Lifecycle</h2>
+  
+  <p>
+  The following diagram represents a typical approval workflow execution sequence:
+  </p>
+  
+  <div class="flow-vertical">
+    <div class="flow-step">User submits request</div>
+    <div>↓</div>
+    <div class="flow-step">Trigger condition validated</div>
+    <div>↓</div>
+    <div class="flow-step">Approval stage 1</div>
+    <div>↓</div>
+    <div class="flow-step">Conditional routing</div>
+    <div>↓</div>
+    <div class="flow-step">Final approval / rejection</div>
+    <div>↓</div>
+    <div class="flow-step">Audit log recorded</div>
+  </div>
+  
+  <hr>
+  
+  <h2>4. Configuration Guide</h2>
+  
+  <h3>Prerequisites</h3>
+  
+  <ul>
+    <li>Administrator access</li>
+    <li>Defined user roles</li>
+    <li>Email server configuration completed</li>
+  </ul>
+  
+  <hr>
+  
+  <h3>Step 1: Create a Workflow</h3>
+  
+  <p>
+  To define a new workflow, complete the following steps:
+  </p>
+  
+  <ol>
+    <li>Navigate to <strong>Admin Panel → Workflow Builder</strong>.</li>
+    <li>Select <strong>Create Workflow</strong>.</li>
+    <li>Enter the workflow name and a clear functional description.</li>
+    <li>Select the trigger type (e.g., Form submission, Status update).</li>
+    <li>Define the initial workflow status.</li>
+    <li>Click <strong>Save</strong> to create the draft workflow.</li>
+  </ol>
+  
+  <hr>
+  
+  <h3>Step 2: Configure Approval Stages</h3>
+  
+  <ol>
+    <li>Open the created workflow.</li>
+    <li>Select <strong>Add Stage</strong>.</li>
+    <li>Assign approver roles.</li>
+    <li>Define escalation timelines.</li>
+    <li>Configure conditional routing logic if applicable.</li>
+    <li>Save stage configuration.</li>
+  </ol>
+  
+  <hr>
+  
+  <h3>Step 3: Configure Notifications</h3>
+  
+  <ol>
+    <li>Navigate to <strong>Settings → Notifications</strong>.</li>
+    <li>Enable email and in-app alerts.</li>
+    <li>Customize subject lines and message templates.</li>
+    <li>Perform a test notification.</li>
+  </ol>
+  
+  <hr>
+  
+  <h3>Step 4: Activate Workflow</h3>
+  
+  <ol>
+    <li>Review all workflow stages.</li>
+    <li>Validate conditional logic.</li>
+    <li>Select <strong>Activate</strong>.</li>
+    <li>Confirm activation.</li>
+  </ol>
+  
+  <p>
+  Once activated, the workflow becomes available to all eligible users.
+  </p>
+  
+  <hr>
+  
+  <h2>5. Monitoring and Audit</h2>
+  
+  <p>
+  Administrators can monitor execution from <strong>Dashboard → Workflow Analytics</strong>.
+  </p>
+  
+  <ul>
+    <li>Pending approvals</li>
+    <li>Average processing time</li>
+    <li>Escalation statistics</li>
+    <li>Rejection ratios</li>
+    <li>Full audit history</li>
+  </ul>
+  
+  <hr>
+  
+  <h2>Business Impact</h2>
+  
+  <ul>
+    <li>Reduces approval cycle time</li>
+    <li>Improves operational transparency</li>
+    <li>Ensures compliance traceability</li>
+    <li>Minimizes manual coordination</li>
+  </ul>
 
-    <ul>
-      <li>Task-based documentation</li>
-      <li>Feature-level explanation</li>
-      <li>Release note structure</li>
-      <li>Information architecture design</li>
-    </ul>
-
-  </main>
-</div>
-
-</body>
-</html>
+  </main> 
+ </div> 
+  </body>
+  </html>

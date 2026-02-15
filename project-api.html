@@ -7,31 +7,132 @@
 <body>
 
 <div class="layout">
+
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="profile">
       <img src="profile.jpg">
     </div>
     <nav class="nav">
-      <a href="index.html">ABOUT</a>
-      <a href="skills.html">SKILLS</a>
-      <a href="projects.html">PROJECTS</a>
+      <a href="index.html">ABOUT ME</a>
+      <a href="./index.html#skills">SKILLS</a>
+      <a href="./index.html#projects">PROJECTS</a>
     </nav>
   </aside>
 
-  <main class="content">
+  <!-- MAIN CONTENT -->
+  <main class="content api-doc">
+
     <h1>API Documentation Sample</h1>
-
-    <pre>
-GET /projects
-
-{
-  "id": "12345",
-  "name": "Sample Project",
-  "status": "Active"
-}
-    </pre>
-
+  
+    <p class="lead">
+      Structured REST-style API documentation designed for developer-first clarity.
+      This sample demonstrates endpoint definition, authentication, request/response modeling,
+      and error handling best practices.
+    </p>
+  
+    <!-- OVERVIEW CARD -->
+    <section class="doc-card">
+      <h2>Overview</h2>
+      <div class="meta-grid">
+        <div><span>Base URL</span> https://api.taskflow.com/v1</div>
+        <div><span>Protocol</span> HTTPS</div>
+        <div><span>Response Format</span> JSON</div>
+      </div>
+    </section>
+  
+    <!-- AUTHENTICATION -->
+    <section class="doc-card">
+      <h2>Authentication</h2>
+      <p>All requests require a Bearer token in the Authorization header.</p>
+  
+  <pre class="code-block">
+  Authorization: Bearer &lt;your_access_token&gt;
+  </pre><br>
+      <p>Tokens are generated using OAuth 2.0 authentication flow.</p>
+    </section>
+  
+    <!-- ENDPOINT -->
+    <section class="doc-card">
+      <h2>Endpoint</h2>
+  
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/projects</span>
+      </div>
+  
+      <p>
+        Retrieves a list of active projects available to the authenticated user.
+      </p>
+    </section>
+  
+    <!-- SAMPLE REQUEST -->
+    <section class="doc-card">
+      <h2>Sample Request</h2>
+  
+  <pre class="code-block">
+  GET /projects HTTP/1.1
+  Host: api.taskflow.com
+  Authorization: Bearer &lt;your_access_token&gt;
+  </pre>
+    </section>
+  
+    <!-- CURL -->
+    <section class="doc-card">
+      <h2>Sample cURL</h2>
+  
+  <pre class="code-block">
+  curl -X GET "https://api.taskflow.com/v1/projects" \
+    -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+  </pre>
+    </section>
+  
+    <!-- RESPONSE -->
+    <section class="doc-card">
+      <h2>Sample Response</h2>
+  
+  <pre class="code-block">
+  {
+    "projects": [
+      {
+        "id": "12345",
+        "name": "Website Redesign",
+        "status": "Active",
+        "created_at": "2026-01-15T10:30:00Z"
+      }
+    ]
+  }
+  </pre>
+    </section>
+  
+    <!-- RESPONSE FIELDS -->
+    <section class="doc-card">
+      <h2>Response Fields</h2>
+      <ul class="field-list">
+        <li><strong>id</strong> – Unique project identifier</li>
+        <li><strong>name</strong> – Project title</li>
+        <li><strong>status</strong> – Current project status</li>
+        <li><strong>created_at</strong> – ISO 8601 timestamp</li>
+      </ul>
+    </section>
+  
+    <!-- ERROR HANDLING -->
+    <section class="doc-card">
+      <h2>Error Handling</h2>
+      <p>The API uses conventional HTTP status codes.</p>
+  
+  <pre class="code-block">
+  {
+    "error": {
+      "code": 401,
+      "message": "Unauthorized – Invalid or expired token"
+    }
+  }
+  </pre>
+    </section>
+  
   </main>
+  
 </div>
 
 </body>
